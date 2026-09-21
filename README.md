@@ -1,15 +1,12 @@
 # JevTuner
 
 JevTuner is a small, open implementation of the **decision-first** idea exposed by
-TypeSafe AI's Jev API. It adapts the training scaffold from
-[ConfTuner](https://github.com/liushiliushi/ConfTuner), but changes the optimized
-object:
-
-- ConfTuner learns a verbal confidence value after generating an answer.
-- JevTuner receives a state, a typed question, and a closed set of choices.
-- One forward pass returns a normalized probability for every choice.
-- Training minimizes Tokenized Multi-class Brier Loss over the complete choice
-  distribution, rather than Brier loss over a separately verbalized confidence.
+TypeSafe AI's Jev API. It builds on the core idea of
+[ConfTuner](https://github.com/liushiliushi/ConfTuner): directly training the
+probability distribution represented by token logits. Given a state, a typed
+question, and a closed set of choices, JevTuner returns a normalized probability
+for every choice in one forward pass and optimizes the complete distribution with
+Tokenized Multi-class Brier Loss.
 
 > [!IMPORTANT]
 > Jev is closed source. TypeSafe publicly names its training method
