@@ -1,0 +1,3 @@
+{"state":"The customer says they were charged twice for the same subscription.","question":"Which team should handle this?","choices":["billing","technical","sales","other"],"label":0}
+{"state":"The app crashes immediately after the user taps Sign in.","question":"Which team should handle this?","choices":["billing","technical","sales","other"],"label":1}
+{"state":"A lead asks whether an annual enterprise plan includes volume discounts.","question":"Which team should handle this?","choices":["billing","technical","sales","other"],"label":2}
