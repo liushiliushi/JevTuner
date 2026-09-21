@@ -19,7 +19,9 @@ probability distribution represented by token logits—to closed-set decision
 tasks. Instead of generating a long response and then reporting a separate
 confidence value, the model scores every candidate decision in one forward pass.
 
-![JevTuner method overview](images/jevtuner_method.png)
+![JevTuner method overview](images/jevtuner_method_drawio.png)
+
+[Editable draw.io diagram](images/jevtuner_method.drawio) · [Vector SVG](images/jevtuner_method.svg)
 
 ## Why JevTuner?
 
