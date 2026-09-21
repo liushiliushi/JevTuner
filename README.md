@@ -38,7 +38,7 @@ different choice strings and different numbers of choices, up to
 ```bash
 cd src
 python jevtuner.py train \
-  --model_name meta-llama/Llama-3.1-8B-Instruct \
+  --model_name Qwen/Qwen3-8B \
   --train_file ../examples/decisions.jsonl \
   --output_dir ../checkpoints/jevtuner \
   --use_peft True
