@@ -37,13 +37,13 @@ confidence value, the model scores every candidate decision in one forward pass.
 ### 1. Select candidate logits from the vocabulary
 
 The language model produces logits over its complete vocabulary of size
-\(|V|\). JevTuner gathers the token logits corresponding to the candidate
+$|V|$. JevTuner gathers the token logits corresponding to the candidate
 decision slots:
 
-\[
+$$
 \mathbf{z}_{\text{decision}}
 = [z_A, z_B, \ldots, z_K].
-\]
+$$
 
 The implementation adds reserved single-token slots
 `<|decision_0|>`, `<|decision_1|>`, ... to the tokenizer. These internal slots
@@ -54,21 +54,21 @@ single-token decisions.
 
 Softmax is applied only across the selected candidate logits:
 
-\[
+$$
 p_k = \frac{\exp(z_k)}{\sum_j \exp(z_j)}.
-\]
+$$
 
 The final decision is `argmax(p)`, while the entire distribution remains
 available to downstream software.
 
 ### 3. Tune probabilities with Multi-class Brier Loss
 
-Given a one-hot target \(\mathbf{y}\), JevTuner directly minimizes:
+Given a one-hot target $\mathbf{y}$, JevTuner directly minimizes:
 
-\[
+$$
 \mathcal{L}_{\text{Brier}}
 = \sum_k (p_k-y_k)^2.
-\]
+$$
 
 A confidently wrong decision receives a large penalty. Increasing probability
 on the correct candidate and reducing probability on incorrect candidates lowers
