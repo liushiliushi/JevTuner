@@ -21,8 +21,6 @@ confidence value, the model scores every candidate decision in one forward pass.
 
 ![JevTuner method overview](images/jevtuner_method_drawio.png)
 
-[Editable draw.io diagram](images/jevtuner_method.drawio) · [Vector SVG](images/jevtuner_method.svg)
-
 ## Why JevTuner?
 
 - **One forward pass.** All candidate logits are read simultaneously; no
