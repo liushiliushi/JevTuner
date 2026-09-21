@@ -84,13 +84,6 @@ Example output:
 The `decision` is `argmax(probabilities)`; there is no separately generated
 confidence string.
 
-## What stayed unchanged
-
-The original ConfTuner/Llama Recipes files remain under `src/llama_recipes` so
-the upstream data and model-loading utilities are still available. JevTuner's
-new default entry point is `src/jevtuner.py`; the legacy confidence scripts are
-kept only for comparison and are not used by it.
-
 ## Attribution
 
 This project is derived from ConfTuner and retains its upstream license notices.
